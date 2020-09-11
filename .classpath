@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="D:/Build/Dependencies/reactive-streams-1.0.2.jar"/>
+	<classpathentry kind="lib" path="D:/Build/Dependencies/slf4j-api-1.7.25.jar"/>
+	<classpathentry kind="lib" path="D:/Build/Dependencies/commons-cli-1.4.jar"/>
+	<classpathentry kind="lib" path="D:/Build/Dependencies/jna-5.2.0.jar"/>
+	<classpathentry kind="lib" path="D:/Build/Dependencies/jna-platform-5.2.0.jar"/>
+	<classpathentry kind="lib" path="D:/Build/Dependencies/rxjava-2.2.8.jar"/>
+	<classpathentry kind="lib" path="D:/Build/Dependencies/commons-codec-1.13.jar"/>
+	<classpathentry kind="lib" path="D:/Build/Dependencies/httpcore5-5.0.1.jar"/>
+	<classpathentry kind="lib" path="D:/Build/Dependencies/httpcore5-h2-5.0.1.jar"/>
+	<classpathentry kind="lib" path="D:/Build/Dependencies/httpcore5-reactive-5.0.1.jar"/>
+	<classpathentry kind="lib" path="D:/Build/Dependencies/httpcore5-testing-5.0.1.jar"/>
+	<classpathentry kind="lib" path="D:/Build/Dependencies/httpclient5-5.0.1.jar"/>
+	<classpathentry kind="lib" path="D:/Build/Dependencies/httpclient5-fluent-5.0.1.jar"/>
+	<classpathentry kind="lib" path="D:/Build/Dependencies/httpclient5-cache-5.0.1.jar"/>
+	<classpathentry kind="lib" path="D:/Build/Dependencies/httpclient5-win-5.0.1.jar"/>
+	<classpathentry kind="lib" path="D:/Build/Dependencies/httpclient5-testing-5.0.1.jar"/>
+	<classpathentry kind="lib" path="D:/Build/Dependencies/json-20200518.jar"/>
+	<classpathentry kind="lib" path="D:/Build/Dependencies/json-simple-1.1.1.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
