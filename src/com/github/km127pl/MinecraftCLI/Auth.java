@@ -17,17 +17,18 @@ public class Auth {
 		
 		HttpPost post = new HttpPost("https://authserver.mojang.com/authenticate");
 
-        // add request parameter, form parameters
+        // Add request parameteres
         String json = "{\"agent\": {\"name\": \"Minecraft\",\"version\": 1},\"username\":\""+ email +"\",\"password\":\""+ password +"\",\"requestUser\": false}";
-        System.out.println(email);
-        System.out.println(json);
+
         post.setEntity(new StringEntity(json));
         post.addHeader("User-Agent", "");
         post.addHeader("Content-Type", "application/json");
         
+        // Send the request
         try (CloseableHttpClient httpClient = HttpClients.createDefault();
         	CloseableHttpResponse response = httpClient.execute(post)) {
         	
+        	// Create a BufferedReader that will get JSON from RESPONSE
         	BufferedReader reader = new BufferedReader(new InputStreamReader(response.getEntity().getContent()));
         	
         	String inputLine;
@@ -38,8 +39,8 @@ public class Auth {
     		}
     		reader.close();    	
     		
+    		// Turn the response into JSON
             JSONObject obj = new JSONObject(responseBuffer.toString());
-            System.out.println(obj.toString());
             response.close();
             return obj.getString("accessToken");
         }
