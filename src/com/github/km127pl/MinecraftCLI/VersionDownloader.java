@@ -3,6 +3,7 @@ package com.github.km127pl.MinecraftCLI;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.json.simple.JSONObject;
@@ -36,10 +37,10 @@ public class VersionDownloader {
 				reader.close();
 				JSONObject jsonObject = (JSONObject) FileManager.readJson( VersionDownloader.APPDATA + "//version_manifest.json" );
 				
-				List versions = (List<String>) jsonObject.get("versions");
+				ArrayList<Object> versions = (ArrayList<Object>) jsonObject.get("versions");
 				for (int i = 0; i < versions.size(); i++) {
 					JSONObject versionObject = (JSONObject) versions.get(i);
-					System.out.println(versions.get(i));
+					//System.out.println(versions.get(i));
 					if(versionObject.get("id") == version) {
 						System.out.println("found the version!");
 						break;
