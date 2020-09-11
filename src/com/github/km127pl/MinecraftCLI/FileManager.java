@@ -3,11 +3,14 @@ package com.github.km127pl.MinecraftCLI;
 import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.FileOutputStream;
+import java.io.FileReader;
 import java.io.IOException;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+
+import org.json.simple.parser.JSONParser;
 
 
 public class FileManager {
@@ -65,5 +68,11 @@ public class FileManager {
 	
 	public static String getWindowsUser() {
 		return System.getProperty("user.name");
+	}
+	
+	public static Object readJson(String filename) throws Exception {
+	    FileReader reader = new FileReader(filename);
+	    JSONParser jsonParser = new JSONParser();
+	    return jsonParser.parse(reader);
 	}
 }

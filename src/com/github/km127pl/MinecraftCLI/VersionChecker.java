@@ -4,13 +4,11 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
-import org.json.simple.parser.ParseException;
-
 public class VersionChecker {
 	static StringBuilder content = new StringBuilder();
     static String line;
     
-	public static boolean doesVersionExist(String name) throws IOException, ParseException {
+	public static boolean doesVersionExist(String name) throws IOException {
 		
 		if(!(FileManager.doesItExist(false, VersionDownloader.APPDATA + "//version_manifest.json"))) {
 			FileManager.download("https://launchermeta.mojang.com/mc/game/version_manifest.json", "version_manifest.json");

@@ -23,4 +23,13 @@ public class Logger {
 		}
 		return censoredText.toString();
 	}
+	
+	public static void argList() {
+		Logger.log("Arguments:");
+		System.out.println("-ver [Version]");
+		System.out.println("-email [Email]");
+		System.out.println("-password [Password]");
+		System.out.println("Example:");
+		System.out.println("java -jar MC-CLI.jar -ver 1.8 -email support@google.com -password password1");
+	}
 }
