@@ -29,8 +29,6 @@ public class MinecraftCLI {
 				break;
 				
 				default:
-					if(args.length < 1)
-						argList();
 				break;
 			}
 			
@@ -38,6 +36,10 @@ public class MinecraftCLI {
 		}
 		if(!(email == null) && !(password == null) && !(version == null)) {
 			areTheySet = true;
+			
+		} else {
+			argList();
+			System.exit(0);
 		}
 		startVersion(version, true);
 	}
