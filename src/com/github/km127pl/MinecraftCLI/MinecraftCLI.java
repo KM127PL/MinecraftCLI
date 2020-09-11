@@ -11,7 +11,6 @@ public class MinecraftCLI {
 	static String version;
 	static boolean areTheySet = false;
 	
-	public static void main(String[] args) throws ParseException, IOException {	
 		for(int i = 0; i<args.length; i++) {
 			switch(args[i].toString()) {
 				case "-ver":
